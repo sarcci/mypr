@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <div class="card">
+      <h1>Edit Mid Term Session</h1>
+      <form #form="ngForm" (ngSubmit)="Save()">
+        <div class="form-group">
+          <label>Mid Term Session</label>
+          <input type="text" [(ngModel)]="sem" [ngModelOptions]="{standalone: true}" class="form-control" id="sem" placeholder="летен/зимски">
+        </div>
+        <div class="form-group">
+          <label>Mid Terms</label>
+          <input type="text" [(ngModel)]="red" [ngModelOptions]="{standalone: true}" class="form-control" id="red" placeholder="први/втори">
+        </div>
+        <div class="form-group">
+          <label>Year</label>
+          <input type="text" [(ngModel)]="studiska" [ngModelOptions]="{standalone: true}" class="form-control" id="studiska" placeholder="студиска година">
+        </div>
+        <button type="submit" class="btn btn-primary" (ngSubmit)="Save()">Edit</button>
+      </form>
+    </div>
+  </div>
+  

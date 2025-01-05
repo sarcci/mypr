@@ -1,0 +1,16 @@
+<div class="container mt-4" >
+    <div class="card">
+        <h1>New Exam Session</h1>
+<form #form="ngForm" (ngSubmit)="New()">
+    <div class="form-group">
+        <label>Exam Session</label>
+        <input type="mesec" [(ngModel)]="mesec" [ngModelOptions]="{standalone: true}" class="form-control" id="mesec" placeholder="прва/втора/трета">
+      </div>
+      <div class="form-group">
+        <label>Year</label>
+        <input type="studiska" [(ngModel)]="studiska" [ngModelOptions]="{standalone: true}" class="form-control" id="studiska"  placeholder="студиска година">
+      </div>
+     <button type="submit" class="btn btn-primary" (ngSubmit)="New()">Add</button>
+  </form>
+</div>
+</div>

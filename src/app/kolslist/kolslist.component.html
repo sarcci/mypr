@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <h2>Распоред</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Колоквиумски сесии</th> 
+          <th>
+            <a href="javascript:void(0)" (click)="New()">Додади нова сесија</a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let KolItem of KolArray">
+          <td>
+            <a href="javascript:void(0)" (click)="Details(KolItem)">Распоред на {{KolItem.red}}те колоквиуми во {{ KolItem.sem }}та колоквиумска сесија {{ KolItem.studiska }}</a>
+          </td>
+          <td>
+            <button (click)="Edit(KolItem)" class="text-primary btn-link">Edit</button> 
+            <button (click)="Delete(KolItem)" class="text-danger btn-link">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

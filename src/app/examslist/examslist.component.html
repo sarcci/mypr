@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <h2>Распоред на испити </h2>
+  <a href="javascript:void(0)" (click)="New()">Додади нов испит</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Предмет</th>
+        <th>Семестар</th>
+        <th>Датум</th>
+        <th>Време</th>
+        <th>Просторија</th>
+        <th>Студентска година</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ExItem of ExArray">
+        <td>{{ ExItem.predmet }}</td>
+        <td>{{ ExItem.sem }}</td>
+        <td>{{ ExItem.datum }}</td>
+        <td>{{ ExItem.vreme }}</td>
+        <td>{{ ExItem.prostorija }}</td>
+        <td>{{ ExItem.stGod }}</td>
+        <td>
+          <button (click)="Edit(ExItem)" class="text-primary btn-link">Edit</button>
+          <button (click)="Delete(ExItem)" class="text-danger btn-link">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
